@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#lignel {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#lignel td, #lignel th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#lignel tr:nth-child(even){background-color: #f2f2f2;}
+
+#lignel tr:hover {background-color: #ddd;}
+
+#lignel th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #C4A4CC;
+  color: white;
+}
+
+#lignecchantiers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#lignecchantiers td, #lignecchantiers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#lignecchantiers tr:nth-child(even){background-color: #f2f2f2;}
+
+#lignecchantiers tr:hover {background-color: #ddd;}
+
+#lignecchantiers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #F3D311;
+  color: white;
+}
+#lignecchateau {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#lignecchateau td, #lignecchateau th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#lignecchateau tr:nth-child(even){background-color: #f2f2f2;}
+
+#lignecchateau tr:hover {background-color: #ddd;}
+
+#lignecchateau th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #F3D311;
+  color: white;
+}
+
+#ligneu {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#ligneu td, #ligneu th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#ligneu tr:nth-child(even){background-color: #f2f2f2;}
+
+#ligneu tr:hover {background-color: #ddd;}
+
+#ligneu th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #B6134C;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+<h1> Saint Cloud - Versailles Rive Droite</h1>
+
+<table id="lignel">
+   <tr>
+<th>
+   
+</th>
+<th>
+  Départ
+</th>
+<th>
+  Arrivée
+</th>
+   </tr>
+{% for item in trains_l %}
+<TR>
+   <TD class="c3">
+<img src="https://www.ratp.fr/sites/default/files/lines-assets/picto/sncf/picto_sncf_ligne-l.1634824971.svg"  width="20" height="20" />
+</TD>
+   <TD class="c1">{{item.departureTime}}</TD>
+   <TD class="c1">{{item.arrivalTime}}</TD>
+</TR>
+{% endfor %}
+</table>
+
+<h1> Saint-Cloud - Versailles Chantiers</h1>
+
+<table id="ligneu">
+   <tr>
+<th>
+   
+</th>
+<th>
+  Départ
+</th>
+<th>
+  Arrivée
+</th>
+   </tr>
+{% for item in trains_u %}
+<TR>
+   <TD class="c3">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Paris_transit_icons_-_Train_U.svg"  width="20" height="20" />
+</TD>
+   <TD class="c1">{{item.departureTime}}</TD>
+   <TD class="c1">{{item.arrivalTime}}</TD>
+</TR>
+{% endfor %}
+</table>
+
+<h1> Javel - Versailles Chateau</h1>
+
+<table id="lignecchateau">
+   <tr>
+<th>
+   
+</th>
+<th>
+  Départ
+</th>
+<th>
+  Arrivée
+</th>
+   </tr>
+{% for item in trains_c_chateau %}
+<TR>
+   <TD class="c3">
+<img src="https://upload.wikimedia.org/wikipedia/fr/c/c1/Logo_RER_C.svg"  width="20" height="20" />
+</TD>
+   <TD class="c1">{{item.departureTime}}</TD>
+   <TD class="c1">{{item.arrivalTime}}</TD>
+</TR>
+{% endfor %}
+</table>
+
+<h1> Javel - Versailles Chantiers</h1>
+
+<table id="lignecchantiers">
+   <tr>
+<th>
+   
+</th>
+<th>
+  Départ
+</th>
+<th>
+  Arrivée
+</th>
+   </tr>
+{% for item in trains_c_chantiers %}
+<TR>
+   <TD class="c3">
+<img src="https://upload.wikimedia.org/wikipedia/fr/c/c1/Logo_RER_C.svg"  width="20" height="20" />
+</TD>
+   <TD class="c1">{{item.departureTime}}</TD>
+   <TD class="c1">{{item.arrivalTime}}</TD>
+</TR>
+{% endfor %}
+</table>
+
+
+</body>
+</html>
+
+

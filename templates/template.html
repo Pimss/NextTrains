@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>Versailles Chantiers - Montparnasse</h1>
+<table>
+{% for item in trains_n %}
+{% if not item.canceled %}
+<TR>
+<TD class="c3">
+{% if item.lineTransportEnum == 'TRAIN_N'%}
+<img src="https://www.ratp.fr/sites/default/files/lines-assets/picto/sncf/picto_sncf_ligne-n.1634824971.svg"  width="20" height="20" />
+{% else -%}
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Logo-TER.png"  width="20" height="20" />
+{% endif %}
+</TD>
+   <TD class="c1">Departure: {{item.departureTime}}</TD>
+   <TD class="c2">Arrival: {{item.arrivalTime}}</TD>
+   {% if not item.platform == ''%}
+   <TD class="c2">Quai: {{item.platform}}</TD>
+   {% endif %}
+
+</TR>
+{% endif %}
+{% endfor %}
+</table>
+
+
+<h1>Versailles Rive Droite - La Défense</h1>
+
+<table>
+{% for item in trains_l %}
+{% if not item.canceled %}
+<TR>
+   <TD class="c3">
+<img src="https://www.ratp.fr/sites/default/files/lines-assets/picto/sncf/picto_sncf_ligne-l.1634824971.svg"  width="20" height="20" />
+</TD>
+   <TD class="c1">Departure: {{item.departureTime}}</TD>
+   <TD class="c2">Arrival: {{item.arrivalTime}}</TD>
+      {% if not item.platform == ''%}
+   <TD class="c2">Quai: {{item.platform}}</TD>
+   {% endif %}
+</TR>
+{% endif %}
+{% endfor %}
+</table>
+
+<h1>Versailles Chantiers - Massy</h1>
+
+<table>
+{% for item in trains_c %}
+{% if not item.canceled %}
+<TR>
+   <TD class="c3">
+<img src="https://upload.wikimedia.org/wikipedia/fr/c/c1/Logo_RER_C.svg"  width="40" height="20" />
+</TD>
+   <TD class="c1">Departure: {{item.departureTime}}</TD>
+   <TD class="c2">Arrival: {{item.arrivalTime}}</TD>
+      {% if not item.platform == ''%}
+   <TD class="c2">Quai: {{item.platform}}</TD>
+   {% endif %}
+</TR>
+{% endif %}
+{% endfor %}
+</table>
+
+<h1>Versailles Chateau- Austerlitz</h1>
+
+<table>
+{% for item in trains_ca %}
+{% if not item.canceled %}
+<TR>
+   <TD class="c3">
+<img src="https://upload.wikimedia.org/wikipedia/fr/c/c1/Logo_RER_C.svg"  width="40" height="20" />
+</TD>
+   <TD class="c1">Departure: {{item.departureTime}}</TD>
+   <TD class="c2">Arrival: {{item.arrivalTime}}</TD>
+      {% if not item.platform == ''%}
+   <TD class="c2">Quai: {{item.platform}}</TD>
+   {% endif %}
+</TR>
+{% endif %}
+{% endfor %}
+</table>
+
+</body>
+</html>
+
+
