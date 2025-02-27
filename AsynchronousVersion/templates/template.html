@@ -39,7 +39,12 @@
 
 
 {% for item in trips %}
-<h1> {{item.trip}}</h1>
+    {% if item.comment %}
+        <h1> {{item.trip}} - {{item.comment}}</h1>
+    {% else %}
+       <h1> {{item.trip}}</h1>
+    {% endif %}
+
 
 <table id="ligne{{loop.index}}">
    <tr>
